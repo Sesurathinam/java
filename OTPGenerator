@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class OTPGenerator {
+
+	static Scanner sc= new Scanner(System.in);
+	
+	public static void main(String[] args) throws Exception {
+		System.out.print("\t\t\tYour OTP:");
+		int sys_otp = (int)(Math.random()*4444+4444);
+		Thread.sleep(3000);
+		System.out.print(sys_otp + "\n\n\t\t\tEnter your OTP:");
+		int user_enter_otp = sc.nextInt();
+		if(sys_otp == user_enter_otp) {
+			System.out.println("\n\t\tverification successfully completed.");
+		}else {
+			System.out.println("\n\t\tverification failed.");
+		}
+		System.out.println("-------------------------------------------------------------------------------");
+	}
+}
